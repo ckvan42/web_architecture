@@ -1,0 +1,36 @@
+body {
+  background-color: antiquewhite;
+  text-align: center;
+  margin: 10%;
+  min-width: 20%;
+}
+
+.profile_pic {
+  width: 10%;
+  margin: 2%;
+  border-radius: 50%;
+}
+
+#quote
+{
+  width: 100%;
+  max-width: max-content;
+  margin: auto;
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+#buttons button
+{
+  width: 15em;
+  height: 3em;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+
+
