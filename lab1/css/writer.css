@@ -19,7 +19,7 @@ textarea {
   display: flex;
 }
 
-.remove_btn_container
+.remove_btn
 {
   margin-left: 0.5em;
 }
@@ -34,6 +34,7 @@ textarea {
   margin-top: 0.5em;
   width: 100%;
   height: 2em;
+  background-color: rgb(36, 51, 126);
 }
 
 #Add
@@ -41,5 +42,6 @@ textarea {
   font-size: 2em;
 }
 
-
-
+#time {
+  text-align: right;
+}

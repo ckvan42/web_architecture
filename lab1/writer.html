@@ -1,33 +1,45 @@
 <!doctype html>
 <html lang="en">
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="./css/writer.css" rel="stylesheet">
-    <title>Lab1</title>
-  </head>
-  <body>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link href="./css/writer.css" rel="stylesheet">
+<title>Lab1</title>
+</head>
 
-
-    <div class="container">
+<body>
+  <div class="card text-center">
+    <div class="card-header">
+      <div id="time"></div>
+    </div>
+    <div class="card-body">
       <div class="row" id="title">
-          <img id="banner" src="./images/whatyouthinking.jpeg" alt="What you are thinking banner">
+        <img id="banner" src="./images/whatyouthinking.jpeg" alt="What you are thinking banner">
       </div>
+
 
       <div id="note_container">
       </div>
 
+
+    </div>
+    <div class="card-footer text-muted">
       <div class="btn-container">
-          <button onclick="addEachNote()" id="Add">Click to Add another box</button>
-          <button onclick="goBackHome()" id="back">BACK</button>
+        <button onclick="addEachNote()" id="Add" class="btn btn-primary">Click to Add another box</button>
+        <button onclick="goBackHome()" id="back" class="btn btn-primary">BACK</button>
       </div>
     </div>
+  </div>
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="./js/writer.js"></script>
-  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+  <script src="./js/writer.js"></script>
+</body>
+
 </html>
