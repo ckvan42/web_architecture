@@ -23,8 +23,11 @@ body {
   margin-top: 5%;
 }
 
-#buttons button
-{
+.btn-primary
+{ 
+  background-color: rgb(27, 106, 27);
+  border-color: green;
+  color: white;
   width: 15em;
   height: 3em;
   margin-right: 5%;

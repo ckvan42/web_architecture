@@ -1,0 +1,46 @@
+body {
+  text-align: center;
+  margin: 10%;
+  min-width: 20%;
+  background-color: rgb(246, 237, 222);
+}
+
+#banner {
+  width: 80%;
+  margin: auto;
+}
+
+.notes {
+  min-height: 3em;
+  position: relative;
+  border: 1px solid gray;
+  background-color: rgb(210, 206, 206);
+  margin-bottom: 0.5em;
+}
+
+.note_center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2em;
+  font-weight: 500;
+  font-size: large;
+}
+
+.btn-container
+{
+  flex-direction: column;
+}
+
+.btn-container button
+{
+  margin-top: 0.5em;
+  width: 100%;
+  height: 2em;
+  background-color: rgb(36, 51, 126);
+}
+
+#time {
+  text-align: right;
+}
