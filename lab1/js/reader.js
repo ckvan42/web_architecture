@@ -15,18 +15,18 @@ window.onload = function() {
 function updateOrCreateTextViewBox(key)
 {
   let textContainer = document.getElementById(key);
-  if (textContainer == null)
-  {
+  // if (textContainer == null)
+  // {
     //create a div with textbox and button.
     textContainer = document.createElement("div");
     textContainer.id = key;
     textContainer.className = "card notes"
     textContainer.innerHTML = "<p class='note_center'>" + localStorage.getItem(key) + "</p>";
     document.getElementById("note_container").appendChild(textContainer);
-  } else{
-    //update
-    textContainer.innerHTML = "<p class='note_center'>" + localStorage.getItem(key) + "</p>";
-  }
+  // } else{
+  //   //update
+  //   textContainer.innerHTML = "<p class='note_center'>" + localStorage.getItem(key) + "</p>";
+  // }
 }
 
 
@@ -34,17 +34,10 @@ function goWriterPage() {
   location.href = "./writer.html";
 }
 
-/**
- * saves to localStorage every 2 seconds
- */
- setInterval(function() {
-  if (localStorage.length < max)
-  {
-    window.location.reload();
-  } 
-  
-  max = localStorage.length;
-  for (let i = 0; i < max; i++) {
+setInterval(function() {
+  let bigContainer = document.getElementById("note_container");
+  bigContainer.replaceChildren();
+  for (let i = 0; i < localStorage.length; i++) {
     updateOrCreateTextViewBox(localStorage.key(i));
   }
   updateTime();

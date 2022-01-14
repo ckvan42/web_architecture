@@ -88,11 +88,11 @@ class Note
   }
 
   deleteFromStorage = function() {
-    localStorage.removeItem(this.id);
     //clearing textbox
     let tb = document.getElementById("container_" + this.id);
     tb.value = "";
     this.parentNode.remove();
+    localStorage.removeItem(this.id);
     updateStorageArray(this.id);
   } 
 
@@ -111,8 +111,9 @@ function updateStorageArray(id)
   //I have to delete from the array too.
   let index = -1;
   for (let i = 0; i < arrayTextBoxes.length; i++) {
-    if(arrayTextBoxes[i]._key === id) {
+    if(arrayTextBoxes[i]._key == id) {
       index = i;
+      arrayTextBoxes.splice(index, 1);
     }
   }
   arrayTextBoxes.splice(index, 1);
@@ -154,9 +155,6 @@ function createRemoveBtn(id)
   rvBtn.innerHTML = "REMOVE";
   return rvBtn;
 }
-
-
-
 
 
 /**
