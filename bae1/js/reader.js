@@ -1,13 +1,10 @@
 /**
  * Initial loading of the window.
  * 
- * It reads from the current localStorage and populate them as Notes.
  */
-let max;
 window.onload = function() {
   //need to populate the array from the localStorage
-  max = localStorage.length;
-  for (let i = 0; i < max; i++) {
+  for (let i = 0; i < localStorage.length; i++) {
     updateOrCreateTextViewBox(localStorage.key(i));
   }
 }; 
@@ -15,20 +12,12 @@ window.onload = function() {
 function updateOrCreateTextViewBox(key)
 {
   let textContainer = document.getElementById(key);
-  // if (textContainer == null)
-  // {
-    //create a div with textbox and button.
     textContainer = document.createElement("div");
     textContainer.id = key;
     textContainer.className = "card notes"
     textContainer.innerHTML = "<p class='note_center'>" + localStorage.getItem(key) + "</p>";
     document.getElementById("note_container").appendChild(textContainer);
-  // } else{
-  //   //update
-  //   textContainer.innerHTML = "<p class='note_center'>" + localStorage.getItem(key) + "</p>";
-  // }
 }
-
 
 function goWriterPage() {
   location.href = "./writer.html";
