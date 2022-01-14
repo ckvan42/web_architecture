@@ -3,10 +3,11 @@
  * 
  * It reads from the current localStorage and populate them as Notes.
  */
-
+let max;
 window.onload = function() {
   //need to populate the array from the localStorage
-  for (let i = 0; i < localStorage.length; i++) {
+  max = localStorage.length;
+  for (let i = 0; i < max; i++) {
     updateOrCreateTextViewBox(localStorage.key(i));
   }
 }; 
@@ -37,7 +38,13 @@ function goWriterPage() {
  * saves to localStorage every 2 seconds
  */
  setInterval(function() {
-  for (let i = 0; i < localStorage.length; i++) {
+  if (localStorage.length < max)
+  {
+    window.location.reload();
+  } 
+  
+  max = localStorage.length;
+  for (let i = 0; i < max; i++) {
     updateOrCreateTextViewBox(localStorage.key(i));
   }
   updateTime();
